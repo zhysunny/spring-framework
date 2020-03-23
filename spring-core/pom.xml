@@ -93,12 +93,6 @@
             <version>3.1.16.RELEASE</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <version>8.5.45</version>
-            <scope>test</scope>
-        </dependency>
         <!-- junit start -->
         <dependency>
             <groupId>junit</groupId>
@@ -123,6 +117,11 @@
         <dependency>
             <groupId>org.powermock</groupId>
             <artifactId>powermock-module-junit4</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
             <scope>test</scope>
         </dependency>
         <!-- junit end -->
