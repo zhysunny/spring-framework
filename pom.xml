@@ -12,6 +12,12 @@
         <module>spring-beans</module>
         <module>spring-core</module>
         <module>spring-aop</module>
+        <module>spring-instrument</module>
+        <module>spring-expression</module>
+        <module>spring-context</module>
+        <module>spring-tx</module>
+        <module>spring-jdbc</module>
+        <module>spring-example</module>
     </modules>
 
     <properties>
@@ -21,6 +27,7 @@
         <log4j.version>2.11.2</log4j.version>
         <kotlin.version>1.2.71</kotlin.version>
         <reactor.version>Bismuth-SR17</reactor.version>
+        <derby.version>10.14.2.0</derby.version>
     </properties>
 
     <dependencyManagement>
@@ -37,6 +44,31 @@
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>spring-instrument</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>spring-core</artifactId>
                 <version>${project.version}</version>
                 <type>test-jar</type>
@@ -44,6 +76,18 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>spring-beans</artifactId>
+                <version>${project.version}</version>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${project.version}</version>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>spring-context</artifactId>
                 <version>${project.version}</version>
                 <type>test-jar</type>
             </dependency>
