@@ -8,6 +8,7 @@
     <artifactId>spring-framework</artifactId>
     <packaging>pom</packaging>
     <version>5.0</version>
+    <name>ROOT</name>
     <modules>
         <module>spring-beans</module>
         <module>spring-core</module>

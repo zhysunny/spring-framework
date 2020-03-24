@@ -34,11 +34,24 @@ public class MyBeanTest {
     @Test
     public void testXmlBeanFactory() throws Exception {
         BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans/MyBeanTest.xml"));
+        // test
         TestBean test = (TestBean)factory.getBean("test");
         assertEquals(test.getId(), 14);
         assertEquals(test.getName(), "zhysunny");
         assertEquals(test.getAge(), 0);
-        System.out.println(test);
+        System.out.println("test == " + test);
+        // test0
+        test = (TestBean)factory.getBean("test0");
+        assertEquals(test.getId(), 14);
+        assertEquals(test.getName(), "zhysunny");
+        assertEquals(test.getAge(), 0);
+        System.out.println("test0 == " + test);
+        // test1
+        test = (TestBean)factory.getBean("test1");
+        assertEquals(test.getId(), 1);
+        assertNull(test.getName());
+        assertEquals(test.getAge(), 0);
+        System.out.println("test1 == " + test);
     }
 
 }
