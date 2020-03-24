@@ -130,6 +130,8 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 		this.delegate = createDelegate(getReaderContext(), root, parent);
 
 		if (this.delegate.isDefaultNamespace(root)) {
+			// 处理profile属性
+			// profile用于开发环境和生产环境分开配置，spring通过spring.profiles.active来选择
 			String profileSpec = root.getAttribute(PROFILE_ATTRIBUTE);
 			if (StringUtils.hasText(profileSpec)) {
 				String[] specifiedProfiles = StringUtils.tokenizeToStringArray(
@@ -143,9 +145,12 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 				}
 			}
 		}
-
+		// 模板方法模式
+		// 解析前处理，留给子类实现
 		preProcessXml(root);
+		// 解析xml核心方法
 		parseBeanDefinitions(root, this.delegate);
+		// 解析后处理，留给子类实现
 		postProcessXml(root);
 
 		this.delegate = parent;
@@ -172,9 +177,13 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 				if (node instanceof Element) {
 					Element ele = (Element) node;
 					if (delegate.isDefaultNamespace(ele)) {
+						// 默认使用spring-bean规范的xml
+						// <bean name="test" class="com.zhysunny.spring.beans.TestBean" />
 						parseDefaultElement(ele, delegate);
 					}
 					else {
+						// 这里涉及到自定义标签，需要些dtd或者xsd规范
+						// <tx:annotation />
 						delegate.parseCustomElement(ele);
 					}
 				}
