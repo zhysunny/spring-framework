@@ -10,6 +10,9 @@ public class TestBean {
     private String name;
     private int age;
 
+    public TestBean() {
+    }
+
     public TestBean(long id) {
         this.id = id;
     }

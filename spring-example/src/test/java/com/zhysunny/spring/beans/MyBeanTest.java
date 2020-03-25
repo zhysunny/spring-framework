@@ -34,7 +34,7 @@ public class MyBeanTest {
     @Test
     public void testXmlBeanFactory() throws Exception {
         BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans/MyBeanTest.xml"));
-        TestBean test = (TestBean)factory.getBean("test");
+        TestBean test = (TestBean)factory.getBean("com.zhysunny.spring.beans.TestBean#0");
         assertEquals(test.getId(), 14);
         assertEquals(test.getName(), "zhysunny");
         assertEquals(test.getAge(), 0);
