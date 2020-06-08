@@ -18,7 +18,6 @@ argfile*
 /build
 buildSrc/build
 /spring-*/build
-target/
 
 # Eclipse artifacts, including WTP generated manifests
 .classpath
