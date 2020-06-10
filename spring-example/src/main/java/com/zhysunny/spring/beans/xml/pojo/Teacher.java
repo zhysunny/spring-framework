@@ -1,4 +1,4 @@
-package com.zhysunny.spring.beans;
+package com.zhysunny.spring.beans.xml.pojo;
 
 /**
  * @author 章云

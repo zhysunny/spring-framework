@@ -1,6 +1,6 @@
-package com.zhysunny.spring.beans.lookup_method;
+package com.zhysunny.spring.beans.xml.lookup_method;
 
-import com.zhysunny.spring.beans.User;
+import com.zhysunny.spring.beans.xml.pojo.User;
 
 /**
  * @author 章云

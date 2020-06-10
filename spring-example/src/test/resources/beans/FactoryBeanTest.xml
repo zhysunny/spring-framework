@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tool"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd">
 
-    <bean id="test" class="com.zhysunny.spring.beans.factory_bean.TestFactoryBean">
+    <bean id="test" class="com.zhysunny.spring.beans.xml.factory_bean.TestFactoryBean">
         <property name="instanceInfo" value="111,name,11"></property>
     </bean>
 

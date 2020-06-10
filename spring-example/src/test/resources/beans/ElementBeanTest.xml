@@ -3,25 +3,25 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="testScopeSingleton" class="com.zhysunny.spring.beans.TestBean" scope="singleton"></bean>
-    <bean name="testScopePrototype" class="com.zhysunny.spring.beans.TestBean" scope="prototype"></bean>
+    <bean name="testScopeSingleton" class="com.zhysunny.spring.beans.xml.pojo.BaseBean" scope="singleton"></bean>
+    <bean name="testScopePrototype" class="com.zhysunny.spring.beans.xml.pojo.BaseBean" scope="prototype"></bean>
 
-    <bean name="testMeta" class="com.zhysunny.spring.beans.TestBean">
+    <bean name="testMeta" class="com.zhysunny.spring.beans.xml.pojo.BaseBean">
         <meta key="meta_key" value="meta_value"></meta>
     </bean>
 
-    <bean name="testLookupMethod" class="com.zhysunny.spring.beans.lookup_method.AbstractLookupMethod">
+    <bean name="testLookupMethod" class="com.zhysunny.spring.beans.xml.lookup_method.AbstractLookupMethod">
         <lookup-method name="getBean" bean="teacher"></lookup-method>
     </bean>
 
-    <bean name="testReplacedMethod" class="com.zhysunny.spring.beans.User">
+    <bean name="testReplacedMethod" class="com.zhysunny.spring.beans.xml.pojo.User">
         <replaced-method name="show" replacer="replacer"></replaced-method>
     </bean>
 
-    <bean name="replacer" class="com.zhysunny.spring.beans.replaced_method.TestReplacedMethod"></bean>
+    <bean name="replacer" class="com.zhysunny.spring.beans.xml.replaced_method.TestReplacedMethod"></bean>
 
-    <bean name="user" class="com.zhysunny.spring.beans.User"></bean>
-    <bean name="teacher" class="com.zhysunny.spring.beans.Teacher"></bean>
-    <bean name="student" class="com.zhysunny.spring.beans.Student"></bean>
+    <bean name="user" class="com.zhysunny.spring.beans.xml.pojo.User"></bean>
+    <bean name="teacher" class="com.zhysunny.spring.beans.xml.pojo.Teacher"></bean>
+    <bean name="student" class="com.zhysunny.spring.beans.xml.pojo.Student"></bean>
 
 </beans>

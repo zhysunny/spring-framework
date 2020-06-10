@@ -1,6 +1,7 @@
-package com.zhysunny.spring.beans;
+package com.zhysunny.spring.beans.xml;
 
 import static org.junit.Assert.*;
+import com.zhysunny.spring.beans.xml.pojo.BaseBean;
 import org.junit.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -33,7 +34,7 @@ public class FactoryBeanTest {
     @Test
     public void testFactoryBean() throws Exception {
         ApplicationContext ac = new ClassPathXmlApplicationContext("beans/FactoryBeanTest.xml");
-        TestBean bean = ac.getBean("test", TestBean.class);
+        BaseBean bean = ac.getBean("test", BaseBean.class);
         assertEquals(bean.getId(), 111);
         assertEquals(bean.getName(), "name");
         assertEquals(bean.getAge(), 11);

@@ -3,11 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tool"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd">
 
-    <import resource="MyBeanTest1.xml"/>
+    <import resource="base-bean-import.xml"/>
 
     <alias name="test" alias="test0"></alias>
 
-    <bean name="test" class="com.zhysunny.spring.beans.TestBean">
+    <bean name="test" class="com.zhysunny.spring.beans.xml.pojo.BaseBean">
         <constructor-arg name="id" value="14" type="long"></constructor-arg>
         <property name="name" value="zhysunny"></property>
     </bean>

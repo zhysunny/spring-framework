@@ -1,4 +1,4 @@
-package com.zhysunny.spring.beans.replaced_method;
+package com.zhysunny.spring.beans.xml.replaced_method;
 
 import org.springframework.beans.factory.support.MethodReplacer;
 import java.lang.reflect.Method;

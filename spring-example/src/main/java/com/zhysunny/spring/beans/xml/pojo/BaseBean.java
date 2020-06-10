@@ -1,19 +1,19 @@
-package com.zhysunny.spring.beans;
+package com.zhysunny.spring.beans.xml.pojo;
 
 /**
  * @author 章云
  * @date 2020/3/24 10:10
  */
-public class TestBean {
+public class BaseBean {
 
     private long id;
     private String name;
     private int age;
 
-    public TestBean() {
+    public BaseBean() {
     }
 
-    public TestBean(long id) {
+    public BaseBean(long id) {
         this.id = id;
     }
 
@@ -43,7 +43,7 @@ public class TestBean {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("TestBean{");
+        final StringBuffer sb = new StringBuffer("BaseBean{");
         sb.append("id=").append(id);
         sb.append(", name='").append(name).append('\'');
         sb.append(", age=").append(age);

@@ -1,6 +1,8 @@
-package com.zhysunny.spring.beans;
+package com.zhysunny.spring.beans.xml;
 
-import com.zhysunny.spring.beans.lookup_method.AbstractLookupMethod;
+import com.zhysunny.spring.beans.xml.lookup_method.AbstractLookupMethod;
+import com.zhysunny.spring.beans.xml.pojo.BaseBean;
+import com.zhysunny.spring.beans.xml.pojo.User;
 import org.junit.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -34,7 +36,7 @@ public class ElementBeanTest {
     @Test
     public void testMeta() throws Exception {
         ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("beans/ElementBeanTest.xml");
-        TestBean bean = ac.getBean("testMeta", TestBean.class);
+        BaseBean bean = ac.getBean("testMeta", BaseBean.class);
         System.out.println(bean);
         Object attribute = ac.getBeanFactory().getBeanDefinition("testMeta").getAttribute("meta_key");
         assertEquals(attribute, "meta_value");
@@ -44,16 +46,16 @@ public class ElementBeanTest {
     @Test
     public void testScopeSingleton() throws Exception {
         ApplicationContext ac = new ClassPathXmlApplicationContext("beans/ElementBeanTest.xml");
-        TestBean bean1 = ac.getBean("testScopeSingleton", TestBean.class);
-        TestBean bean2 = ac.getBean("testScopeSingleton", TestBean.class);
+        BaseBean bean1 = ac.getBean("testScopeSingleton", BaseBean.class);
+        BaseBean bean2 = ac.getBean("testScopeSingleton", BaseBean.class);
         assertEquals(bean1, bean2);
     }
 
     @Test
     public void testScopePrototype() throws Exception {
         ApplicationContext ac = new ClassPathXmlApplicationContext("beans/ElementBeanTest.xml");
-        TestBean bean1 = ac.getBean("testScopePrototype", TestBean.class);
-        TestBean bean2 = ac.getBean("testScopePrototype", TestBean.class);
+        BaseBean bean1 = ac.getBean("testScopePrototype", BaseBean.class);
+        BaseBean bean2 = ac.getBean("testScopePrototype", BaseBean.class);
         assertNotEquals(bean1, bean2);
     }
 
