@@ -98,11 +98,6 @@
             <artifactId>powermock-module-junit4</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <scope>test</scope>
-        </dependency>
         <!-- junit end -->
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -126,6 +121,12 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>spring-tx</artifactId>
             <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>8.5.45</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
